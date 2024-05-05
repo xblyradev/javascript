@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+	font-size: 1.2rem;
+	font-family: "Plus Jakarta Sans", sans-serif;
+	font-weight: 400;
+}
+
+body {
+	background: whitesmoke;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 7.5rem;
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+
+p, strong {
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+strong {
+	color: dodgerblue;
+	font-weight: bold;
+}
+
+.weight-converter {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin: 1.5rem auto;
+}
+
+select {
+	width: 200px;
+	height: 40px;
+	font-size: 1rem;
+	border: 2px solid black;
+	text-align: center;
+	transition: 0.2s ease-in-out;
+	background: lightgray;
+}
+
+select:hover {
+	font-size: 1.1rem;
+	transition: 0.2s ease-in-out;
+}
+
+#dropdown-left {
+	border-radius: 1rem 0 0 1rem;
+}
+
+#dropdown-left:hover {
+	background: mediumslateblue;
+	color: white;
+}
+
+#dropdown-right {
+	border-radius: 0 1rem 1rem 0;
+}
+
+#dropdown-right:hover {
+	background: indianred;
+	color: white;
+}
+
+#text-input {
+	width: 200px;
+	height: 34px;
+	font-size: 1rem;
+	text-align: center;
+	border: none;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	transition: 0.2s ease-in-out;
+
+}
+
+#text-output {
+	width: 200px;
+	height: 34px;
+	font-size: 1rem;
+	text-align: center;
+	border: none;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	transition: 0.2s ease-in-out;
+
+}
+
+#text-input:hover, #text-output:hover {
+	font-size: 1.1rem;
+	transition: 0.2s ease-in-out;
+
+}
+
+#swap-btn {
+	width: 40px;
+	height: 40px;
+	font-size: 1.2rem;
+	border: 2px solid black;
+	background: lightyellow;
+	font-weight: bold;
+	transition: 0.2s ease-in-out;
+}
+
+#swap-btn:hover {
+	background: yellow;
+	transition: 0.2s ease-in-out;
+}
+
+.swap-txt {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	transition: 0.2s ease-in-out;
+	background: none;
+}
+
+.swap-txt:hover {
+	transform: rotate(180deg);
+	transform-origin: 50% 60%;
+	transition: 0.2s ease-in-out;
+}
+
+#swap-btn:active {
+	background: lightcyan;
+}

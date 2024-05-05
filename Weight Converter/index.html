@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Unit Converter</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Simple Weight Converter v0.1</h1>
+	<p>Created by <strong>emmydayo</strong></p>	
+	<div class="weight-converter">
+		<select id="dropdown-left">
+			<option value="microgram">µg → microgram</option>
+			<option value="miligram">mg → miligram</option>
+			<option value="gram">g → gram</option>
+			<option value="kilogram">kg → kilogram</option>
+			<option value="ton">mt → metric ton</option>
+			<option value="ounce">oz → ounce</option>
+			<option value="pound">lb → pound</option>
+			<option value="stone">st → stone</option>
+			<option value="uston">ust → u.s. ton</option>
+			<option value="ukton">ukt → u.k. ton</option>
+		</select>
+		<input type="number" id="text-input"/>
+		<button id="swap-btn"><span class="swap-txt">⇌</span></button>
+		<input type="number" id="text-output"/>
+		<select id="dropdown-right">
+			<option value="microgram">µg → microgram</option>
+			<option value="miligram">mg → miligram</option>
+			<option value="gram">g → gram</option>
+			<option value="kilogram">kg → kilogram</option>
+			<option value="ton">mt → metric ton</option>
+			<option value="ounce">oz → ounce</option>
+			<option value="pound">lb → pound</option>
+			<option value="stone">st → stone</option>
+			<option value="uston">ust → u.s. ton</option>
+			<option value="ukton">ukt → u.k. ton</option>
+		</select>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
