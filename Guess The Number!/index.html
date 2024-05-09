@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guess The Number! v1</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="help-btn">?</div>
+	<div id="help-container"><div id="help-content">
+		<p>You have 6 <strong>tries</strong>, there's no real objective but feel free to <strong>score</strong> as many points as you'd like!</p>
+		<p>If you <strong>guess</strong> the number correctly you'll score <strong>1 point</strong>.</p>
+		<p>If you <strong>fail</strong> to guess the number you'll lose <strong>1 point</strong>.</p>
+		<p>If you <strong>guess</strong> a number in your first try you'll get to score <strong>3 points</strong>!</p>
+	</div></div>
+	<div id="content">
+		<h1>Guess The Number! v1</h1>
+		<p id="owner">Created by <strong>emmydayo</strong></p>
+		<div id="scoreboard"></div>
+		<div id="guess-screen"></div>
+		<div class="controls">
+			<div class="circle2">
+				<button id="plus">+</button>
+				<button id="minus">-</button>
+			</div>
+			<input id="number-input" type="number" inputmode="numeric" min="0" max="100" value="0" />
+			<div class="circle1">
+				<button id="plus-ten">+10</button>
+				<button id="minus-ten">-10</button>
+			</div>
+			<button id="guess">Guess</button>
+			<button id="reset">Try Again!</button>
+		</div>
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
