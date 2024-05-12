@@ -7,9 +7,279 @@
 }
 
 body {
-	background: linear-gradient(0deg, navajowhite, blueviolet);
-	width: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(180deg, dodgerblue 0%, navajowhite 24%, #ff8f00 49%, darkmagenta 74%, #2e0887 100%); 
+	width: 100%;
+	background-size: 300% 300%;
+	background-position: 0% 50%;
 	height: 100vh;
+}
+
+#name-input {
+	text-align: center;
+	width: 500px;
+	height: 50px;
+	font-size: 1.2rem;
+	background: white !important;
+	border: 1px solid lightgray;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+#main-container {
+	display: none;
+	align-items: center;
+	justify-content: space-evenly;
+	border-radius: 2rem;
+	width: 800px;
+	height: 440px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+#location-container {
+	color: white;
+	display: flex;
+	position: absolute;
+	margin-bottom: 21rem;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 800px;
+	height: 105px;
+}
+
+#name {
+	font-size: 2rem;
+}
+
+#region {
+	font-size: 1rem;
+}
+
+#country {
+	font-size: 1.5rem;
+}
+
+#unit-swap {
+	position: absolute;
+	background: white;
+	border: 1px solid lightgray;
+	font-size: 1.2rem;
+	font-weight: bold;
+	top: 2rem;
+	right: 2rem;
+	z-index: 5;
+	border-radius: 0.5rem;
+	width: 35px;
+	height: 35px;
+}
+
+#unit-swap:active {
+	background: gray;
+}
+
+#weather-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2rem;
+	width: 325px;
+	height: 200px;
+	background: var(--white-tr);
+	border: 1px solid lightgray;
+}
+
+#temp {
+	position: absolute;
+	top: 2.5rem;
+	left: 2rem;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+#weather-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	border: 1px solid lightgray;
+	border-radius: 5rem;
+	top: 2rem;
+	right: 2rem;
+	width: 80px;
+	height: 80px;
+}
+
+#icon {
+	width: 65px;
+	height: 65px;
+}
+
+#feels-like {
+	position: absolute;
+	left: 2rem;
+	top: 6rem;
+}
+
+#weather-condition {
+	position: absolute;
+	left: 2rem;
+	top: 7.5rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: gray;
+}
+
+#wind-title, #humidity-title, #pressure-title {
+	position: absolute;
+	top: 0;
+	width: 150px;
+	text-align: center;
+	margin-top: 1rem;
+	font-weight: bold;
+}
+#wind-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2rem;
+	width: 150px;
+	height: 200px;
+	background: var(--white-tr);
+	border: 1px solid lightgray;
+}
+
+#wind-circle {
+	width: 125px;
+	height: 125px;
+	margin-top: 1rem;
+	background: var(--white-tr);
+	border: 1px solid lightgray;
+	box-shadow: 0px 0px 50px white;
+	border-radius: 5rem;
+}
+
+#wind-arrow {
+	width: 125px;
+	height: 125px;
+	z-index: 1;
+	background: red;
+	clip-path: polygon(50% 0%, 35% 10%, 50% 5%, 65% 10%);
+	transform-origin: center;
+	transition: 1s ease-in-out;
+}
+
+#wind {
+	margin-top: 1rem;
+	width: 75px;
+	height: 70px;
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+}
+
+#wind-degree {
+	width: 75px;
+	font-size: 2rem;
+}
+
+#wind-speed {
+	font-size: 1rem;
+	font-weight: 600;
+	color: gray;
+}
+
+#wind-direction {
+	font-size: 0.7rem;
+	margin-left: 2.5rem;
+	margin-bottom: -0.25rem;
+}
+
+#humidity-container {
+	width: 150px;
+	height: 200px;
+	background: var(--white-tr);
+	border: 1px solid lightgray;
+	border-radius: 2rem;
+	overflow: hidden;
+}
+
+#humidity-gauge {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	width: 150px;
+	z-index: -1;
+	background: linear-gradient(0deg, springgreen, cyan);
+}
+
+#humidity-percent {
+	position: absolute;
+	bottom: 1rem;
+	width: 150px;
+	text-align: center;
+	align-items: center;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+#pressure-container {
+	width: 150px;
+	height: 200px;
+	background: var(--white-tr);
+	border: 1px solid lightgray;
+	border-radius: 2rem;
+}
+
+#pressure-gauge {
+	margin: 4rem;
+	display: flex;
+	justify-content: center;
+}
+
+#element1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	background: white;
+	border: 1px solid lightgray;
+	border-radius: 5rem 5rem 0 0;
+	overflow: hidden;
+}
+
+#gauge-bar {
+	position: absolute;
+	left: 0;
+	bottom: -0.1rem;
+	width: 50px;
+	height: 2px;
+	background: red;
+	transform: rotate(76deg);
+	transform-origin: right;
+}
+
+#element2 {
+	position: absolute;
+	top: 0;
+	width: 70px;
+	height: 70px;
+	border: 15px solid white;
+	border-radius: 5rem;
+	background: transparent;
+}
+
+#last-updated {
+	position: absolute;
+	margin-top: 22rem;
+	color: white;
 }
 
 .glass {
@@ -19,93 +289,40 @@ body {
 	backdrop-filter: blur(5px);
 }
 
-#name-input {
-	text-align: center;
-}
-
-#unit-swap {
-	color: white;
-	border-radius: 0.5rem;
-	width: 25px;
-	height: 25px;
-}
-
-#icon {
-	width: 50px;
-	height: 50px;
-}
-
-#wind-container {
-	display: none;
-	justify-content: center;
-	align-items: center;
-	border-radius: 2rem;
-	width: 150px;
-	height: 200px;
-}
-
-#wind-title {
-	display: flex;
-	position: absolute;
-	margin-bottom: 11rem;
-	font-weight: bold;
-	color: white;
-	text-shadow: 1px 1px 10px white;
-}
-
-#wind-circle {
-	width: 100px;
-	height: 100px;
-	background: var(--white-tr);
-	border: 1px solid lightgray;
-	box-shadow: 0px 0px 50px white;
-	border-radius: 5rem;
-}
-
-#wind-arrow {
-	width: 100px;
-	height: 100px;
-	z-index: 1;
-	background: red;
-	clip-path: polygon(50% 0%, 40% 7.5%, 50% 5%, 60% 7.5%);
-	transform-origin: center;
-	transition: 1s ease-in-out;
-}
-
-#wind {
-	position: absolute;
-	text-align: center;
-	font-weight: bold;
-}
-
-#wind-degree {
-	font-size: 1.8rem;
-}
-
-#wind-kph, #wind-mph {
-	font-size: 0.8rem;
-	font-weight: 600;
-	color: gray;
-}
-
-#wind-direction {
-	font-size: 0.5rem;
-	margin-left: 2.5rem;
-	margin-bottom: -0.25rem;
-}
-
 .reveal {
-	animation: animateText 0.5s linear;
+	animation: animateElem 0.5s linear;
 	transition: 0.2s ease-in-out;
 }
 
-@keyframes animateText {
+@keyframes animateElem {
 	from {
 		scale: 0;
 		opacity: 0;
+		margin-top: 50rem;
+		transform: rotate3d(1, 1, 1, 270deg);
 	}
 	to {
 		scale: 1;
 		opacity: 1;
+		margin-top: 0rem;
+		transform: rotate3d(0);
+	}
+}
+
+@keyframes dayToNight {
+	from {
+		background-position: 0% 50%;
+	}
+	to {
+		background-position: 0% 100%;
+	}
+}
+
+@keyframes nightToDay {
+	from {
+		background-position: 0% 50%;
+	}
+	to {
+		background-position: 0% 0%;
 	}
 }

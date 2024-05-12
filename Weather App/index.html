@@ -7,18 +7,37 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<input id="name-input" placeholder="Your location!" />
-	<div id="location-info"></div>
-	<div id="weather-temp"></div>
-	<button id="unit-swap" class="glass">ºF</button>
-	<div id="weather-icon"></div>
-	<div id="weather-condition"></div>
-	<div id="wind-container" class="glass">
-		<p id="wind-title">Wind</p>
-		<div id="wind"></div>
-		<div id="wind-circle">
-			<div id="wind-arrow"></div>
+	<input id="name-input" placeholder="Search for a location" class="glass reveal"/>
+	<div id="main-container" class="reveal glass">
+		<button id="unit-swap" class="glass">ºF</button>
+		<div id="location-container"></div>
+		<div id="weather-container" class="glass reveal">
+			<div id="weather-icon"></div>
+			<div id="weather-temp"></div>
+			<div id="weather-condition"></div>
 		</div>
+		<div id="wind-container" class="glass">
+			<p id="wind-title">Wind</p>
+			<div id="wind"></div>
+			<div id="wind-circle">
+				<div id="wind-arrow"></div>
+			</div>
+		</div>
+		<div id="humidity-container" class="glass">
+			<div id="humidity-title">Humidity</div>
+			<div id="humidity-gauge">
+			</div>
+		</div>
+		<div id="pressure-container" class="glass">
+			<div id="pressure-title">Pressure</div>
+			<div id="pressure-gauge">
+				<div id="element1">
+				<div id="gauge-bar"></div>
+				<div id="element2"></div>
+				</div>
+			</div>
+		</div>
+		<div id="last-updated"></div>
 	</div>
 	<script src="script.js"></script>
 </body>
