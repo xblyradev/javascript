@@ -7,8 +7,9 @@ const weatherIcon = document.getElementById("weather-icon");
 const weatherCondition = document.getElementById("weather-condition");
 const windInfo = document.getElementById("wind");
 const windArrow = document.getElementById("wind-arrow");
-const pressureGauge = document.getElementById("pressure-gauge");
 const humidityGauge = document.getElementById("humidity-gauge");
+const pressureIndicator = document.getElementById("indicator");
+const pressureUnit = document.getElementById("pressure-unit");
 const lastUpdated = document.getElementById("last-updated");
 const body = document.querySelector("body");
 
@@ -70,6 +71,11 @@ windArrow.style.transform = `rotate(${data.current.wind_degree}deg)`;
 humidityGauge.innerHTML = `<div id="humidity-percent">${data.current.humidity}%</div>`;
 
 humidityGauge.style.height = `${data.current.humidity}%`;
+
+// Pressure Container Elements
+pressureUnit.innerHTML = `<div class="reveal">${unitMetric ? data.current.pressure_mb + "<strong> mb</strong>" : data.current.pressure_in + "<strong> \"Hg</strong>"}</div>`;
+
+pressureIndicator.style.bottom = `${data.current.pressure_mb / 17}%`;
 
 // Last Updated
 lastUpdated.innerHTML = `<div><strong>Last updated:</strong> ${data.current.last_updated}</div>`;

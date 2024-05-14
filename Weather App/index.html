@@ -3,15 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Weather App v0.1</title>
+	<title>Simple Weather v0.3</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<input id="name-input" placeholder="Search for a location" class="glass reveal"/>
+	<h1 class="reveal">Simple Weather v0.3</h1>
+	<input id="name-input" placeholder="Search for a location!" class="glass reveal"/>
 	<div id="main-container" class="reveal glass">
 		<button id="unit-swap" class="glass">ºF</button>
 		<div id="location-container"></div>
-		<div id="weather-container" class="glass reveal">
+		<div id="weather-container" class="glass">
 			<div id="weather-icon"></div>
 			<div id="weather-temp"></div>
 			<div id="weather-condition"></div>
@@ -30,10 +31,11 @@
 		</div>
 		<div id="pressure-container" class="glass">
 			<div id="pressure-title">Pressure</div>
+			<div id="pressure-unit"></div>
 			<div id="pressure-gauge">
-				<div id="element1">
-				<div id="gauge-bar"></div>
-				<div id="element2"></div>
+				<div id="gauge-bar">
+					<div id="ticks"></div>
+					<div id="indicator"></div>
 				</div>
 			</div>
 		</div>

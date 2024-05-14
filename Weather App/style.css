@@ -16,6 +16,12 @@ body {
 	background-size: 300% 300%;
 	background-position: 0% 50%;
 	height: 100vh;
+	overflow: hidden;
+}
+
+h1 {
+	color: white;
+	text-shadow: 1px 0px 10px lightgray;
 }
 
 #name-input {
@@ -34,22 +40,21 @@ body {
 	align-items: center;
 	justify-content: space-evenly;
 	border-radius: 2rem;
-	width: 800px;
-	height: 440px;
-	overflow: hidden;
-	overflow-y: auto;
+	width: 1000px;
+	height: 500px;
 }
 
 #location-container {
 	color: white;
+	text-shadow: 1px 0px 10px lightgray;
 	display: flex;
 	position: absolute;
-	margin-bottom: 21rem;
+	top: 0;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
 	width: 800px;
-	height: 105px;
+	height: 120px;
 }
 
 #name {
@@ -66,20 +71,20 @@ body {
 
 #unit-swap {
 	position: absolute;
-	background: white;
+	background: #ffffff;
 	border: 1px solid lightgray;
 	font-size: 1.2rem;
-	font-weight: bold;
+	font-weight: 500;
 	top: 2rem;
 	right: 2rem;
 	z-index: 5;
 	border-radius: 0.5rem;
-	width: 35px;
-	height: 35px;
+	width: 50px;
+	height: 50px;
 }
 
 #unit-swap:active {
-	background: gray;
+	background: transparent;
 }
 
 #weather-container {
@@ -129,6 +134,8 @@ body {
 	position: absolute;
 	left: 2rem;
 	top: 7.5rem;
+	width: 250px;
+	height: 50px;
 	font-size: 1.2rem;
 	font-weight: bold;
 	color: gray;
@@ -215,7 +222,7 @@ body {
 	bottom: 0;
 	width: 150px;
 	z-index: -1;
-	background: linear-gradient(0deg, springgreen, cyan);
+	background: linear-gradient(0deg, springgreen, cyan, transparent 100%);
 }
 
 #humidity-percent {
@@ -226,6 +233,12 @@ body {
 	align-items: center;
 	font-size: 1.8rem;
 	font-weight: bold;
+}
+
+#percipitation {
+	color: gray;
+	position: absolute;
+	bottom: 1rem;
 }
 
 #pressure-container {
@@ -242,44 +255,61 @@ body {
 	justify-content: center;
 }
 
-#element1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	width: 100px;
-	height: 50px;
-	background: white;
-	border: 1px solid lightgray;
-	border-radius: 5rem 5rem 0 0;
-	overflow: hidden;
-}
-
 #gauge-bar {
+	display: flex;
+	align-content: center;
+	justify-content: center;
 	position: absolute;
-	left: 0;
-	bottom: -0.1rem;
-	width: 50px;
-	height: 2px;
-	background: red;
-	transform: rotate(76deg);
-	transform-origin: right;
+	top: 3rem;
+	margin-left: -0.5rem;
+	width: 7.5px;
+	height: 100px;
+	border: 1px solid lightgray;
+	border-radius: 2rem;
+	background: transparent;
 }
 
-#element2 {
+#ticks {
 	position: absolute;
-	top: 0;
-	width: 70px;
-	height: 70px;
-	border: 15px solid white;
+	top: 0.25rem;
+	left: 0.75rem;
+	width: 7.5px;
+	height: 100px;
+	background-size: 10px 10px;
+	background-color: #ffffff10;
+	background-image: linear-gradient(0deg, transparent 90%, lightgray 1px);
+}
+
+#indicator {
+	position: absolute;
+	bottom: 0%;
+	width: 7.5px;
+	height: 5px;
+	background: red;
 	border-radius: 5rem;
-	background: transparent;
+}
+
+#pressure-unit {
+	position: absolute;
+	bottom: 0.5rem;
+	align-content: center;
+	line-height: 1.75rem;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	font-size: 1.5rem;
 }
 
 #last-updated {
 	position: absolute;
-	margin-top: 22rem;
+	bottom: 0;
+	width: 325px;
+	height: 75px;
+	font-size: 1.2rem;
+	text-align: center;
+	align-content: center;
 	color: white;
+	text-shadow: 1px 0px 10px lightgray;
 }
 
 .glass {
