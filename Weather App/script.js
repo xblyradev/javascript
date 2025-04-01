@@ -23,7 +23,7 @@ const fetchWeather = async () => {
 		method: "GET",
 		headers: {
 			"X-RapidAPI-Key": "f6c12a8fe9mshecc4576cadeb217p1b2560jsn29e200cdb38c",
-			"X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com"
+			"X-RapidAPI-Host": "weather-api167.p.rapidapi.com"
 		}
 	};
 	
