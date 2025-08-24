@@ -22,8 +22,8 @@ const fetchWeather = async () => {
 	const options = {
 		method: "GET",
 		headers: {
-			"X-RapidAPI-Key": "f6c12a8fe9mshecc4576cadeb217p1b2560jsn29e200cdb38c",
-			"X-RapidAPI-Host": "weather-api167.p.rapidapi.com"
+			"X-RapidAPI-Key": "ed7f6510f4mshbb2de3ae060a234p16d94djsna03f6a7186be",
+			"X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com"
 		}
 	};
 	
@@ -103,3 +103,4 @@ nameInput.addEventListener("keydown", (e) => {
 		nameInput.blur();
 	}
 });
+
